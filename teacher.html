@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PathShala - User Page</title>
+    <link rel="stylesheet" href="./Styles/user.css" />
+</head>
+<body>
+    <div class="nav">
+        <div class="elements">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
+            <a href="#" class="active"><p>Study Material</p></a>
+            <a href="./assignments_teacher.html"><p>Assignments</p></a>
+            <a href="./assignments_teacher.html"><p>Grades</p></a>
+            <p id="selectedCourseDisplay" class="selected-course"></p>
+        </div>
+        <div>
+            <div class="guest"></div>
+            <a href="./index.html">Logout</a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="selected-course"></div>
+        <h2>Uploaded Study Material</h2>
+    </div>
+    <div class="add"><h2>Add New Study Material</h2></div>
+    <div class="add" id="uploadFormContainer">
+        <form>
+            <div>
+                <label for="topicName">Topic name</label><br />
+                <input type="text" id="topicName" />
+            </div>
+            <div>
+                <label for="materialName">Study material name</label><br />
+                <input type="text" id="materialName" />
+            </div>
+            <div>
+                <label for="fileInput">Upload file</label><br />
+                <input type="file" id="fileInput" accept=".pdf, .doc, .docx" />
+            </div>
+            <button class="button2" type="button" onclick="uploadStudyMaterial()">Submit</button>
+        </form>
+    </div>
+    <div class="add"><h2>Existing Study Materials</h2></div>
+    <div class="section">
+        <div class="lectures"></div>
+    </div>
+    <script src="./Scripts/teacher.js"></script>
+</body>
+</html>
