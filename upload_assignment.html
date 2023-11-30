@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PathShala - Upload Assignment</title>
+    <link rel="stylesheet" href="styles/uploadAssignment.css">
+</head>
+<body>
+    <div class="nav">
+        <div class="elements">
+          <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
+          <a href="./study_material_teacher.html"><p>Study Material</p></a>
+          <a href="./assignments_teacher.html" class="active"><p>Assignments</p></a>
+        </div>
+        <div>
+          <div class="guest"></div>
+          <a href="./index.html">Logout</a>
+        </div>
+    </div>
+    <div class="title">
+        <h2>Assignments</h2>
+    </div>
+    <div class="container">
+        <h2>Upload Assignment</h2>
+        <form id="assignmentForm">
+            <label for="subject">Select Course:</label>
+            <select id="subject" required>
+                <option value="math">Math</option>
+                <option value="science">Science</option>
+                <!-- Add more subjects as needed -->
+            </select>
+            <br>
+
+            <label for="topic">Select Topic:</label>
+            <select id="topic" required>
+                <!-- Topics based on selected subject will be dynamically populated using JavaScript -->
+            </select>
+            <br>
+
+            <label for="assignmentName">Assignment Name:</label>
+            <input type="text" id="assignmentName" required>
+            <br>
+
+            <label for="assignmentDescription">Assignment Description:</label>
+            <textarea id="assignmentDescription" rows="4" required></textarea>
+            <br>
+
+            <label for="deadline">Deadline Date:</label>
+            <input type="date" id="deadline" required>
+            <br>
+
+            <button class="button" type="submit">Upload Assignment</button>
+        </form>
+    </div>
+
+    <script src="scripts/upload_assignment.js"></script>
+</body>
+</html>
