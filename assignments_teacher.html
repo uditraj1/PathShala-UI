@@ -1,64 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PathShala - Teacher Assignments</title>
-    <link rel="stylesheet" href="./Styles/assignments_teacher.css" />
-  </head>
-  <body>
+    <title>PathShala - Assignment Teacher Page</title>
+    <link rel="stylesheet" href="./Styles/assignmentsTeacher.css" />
+</head>
+<body>
     <div class="nav">
-      <div class="elements">
-        <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
-        <a href="./study_material_teacher.html"><p>Study Material</p></a>
-        <a href="./assignments_teacher.html" class="active"><p>Assignments</p></a>
-      </div>
-      <div>
-        <div class="guest"></div>
-        <a href="./index.html">Logout</a>
-      </div>
+        <div class="elements">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
+            <a href="./teacher.html"><p>Study Material</p></a>
+            <a href="./assignments_teacher.html" class="active"><p>Assignments</p></a>
+            <a href="./assignments_teacher.html"><p>Grades</p></a>
+            <p id="selectedCourseDisplay" class="selected-course"></p>
+        </div>
+        <div>
+            <div class="guest"></div>
+            <a href="./index.html">Logout</a>
+        </div>
     </div>
     <div class="title">
-      <h2>Assignments</h2>
+        <div class="selected-course"></div>
+        <h2>Uploaded Assignments</h2>
     </div>
-    <div class="add">
-      <p>Filter assignments</p>
-      <form>
-        <div>
-          <label for="title">By title</label><br />
-          <select id="title" onchange="filterTitle()">
-            <option value="All">All</option>
-            <option value="Classes">Classes</option>
-            <option value="Import-Export">Import-Export</option>
-            <option value="Local Storage">Local Storage</option>
-            <option value="OOPS">OOPS</option>
-            <option value="Functions">Functions</option>
-            <option value="LLD">LLD</option>
-            <option value="Closures">Closures</option>
-            <option value="Complexity Analysi">Complexity Analysis</option>
-            <option value="Fetch">Fetch</option>
-            <option value="Sorting Algorithm">Sorting Algorithm</option>
-            <option value="Constructor Function">Constructor Function</option>
-            <option value="Prototype">Prototype</option>
-          </select>
-        </div>
-        <div>
-          <label for="schedule">By deadline date</label><br />
-          <input type="date" id="schedule" onchange="filterDate()" />
-        </div>
-        <div>
-          <label for="add">Reset filters</label><br />
-          <button onclick="resetFilter()">Reset</button>
-        </div>
-      </form>
+    <div class="add"><h2>Add New Assignment</h2></div>
+    <div class="add" id="uploadFormContainer">
+        <form>
+            <div>
+                <label for="topicName"> Topic name</label><br />
+                <input type="text" id="topicName" />
+            </div>
+            <div>
+                <label for="assignmentName">Assignment name</label><br />
+                <input type="text" id="assignmentName" />
+            </div>
+            <div>
+                <label for="assignmentDescription">Assignment description</label><br />
+                <input type="text" id="assignmentDescription" />
+            </div>
+            <div>
+                <label for="fileInput">Upload file</label><br />
+                <input type="file" id="fileInput" accept=".pdf, .doc, .docx" />
+            </div>
+            <button class="button" type="button" onclick="uploadAssignment()">Submit</button>
+        </form>
     </div>
-    <div class="addbutton">
-        <button class="button" id="uploadModal" onclick="uploadAssignment()">Upload Assignment</button>
-    </div>
+    <div class="add"><h2>Existing Assignments</h2></div>
     <div class="section">
-      <div class="lectures"></div>
+        <div class="lectures"></div>
     </div>
-  </body>
+    <script src="./Scripts/teacherAssignments.js"></script>
+</body>
 </html>
-<script src="./Scripts/teacherAssignments.js"></script>
