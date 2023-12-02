@@ -4,10 +4,10 @@ An E Learning Management System for admin, teacher and student. Project is bulit
 # Features of the Project 
 
 ## 1) Student
-##   a) Student Dashboard
-##   b) View and Download Study Material
-##   c) View and Download Assignments
-##   d) Submit Assignment
+#   a) Student Dashboard
+#   b) View and Download Study Material
+#   c) View and Download Assignments
+#   d) Submit Assignment
 
 ## 2) Teacher
    a) Teacher Dashboard
