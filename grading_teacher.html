@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PathShala - Assignment Teacher Page</title>
+    <link rel="stylesheet" href="./Styles/gradingTeacher.css" />
+</head>
+<body>
+    <div class="nav">
+        <div class="elements">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
+            <a href="./teacher.html"><p>Study Material</p></a>
+            <a href="./assignments_teacher.html"><p>Assignments</p></a>
+            <a href="./grading_teacher.html" class="active"><p>Grading</p></a>
+            <p id="selectedCourseDisplay" class="selected-course"></p>
+        </div>
+        <div>
+            <div class="guest"></div>
+            <a href="./index.html">Logout</a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="selected-course"></div>
+        <h2>Grade Assignments</h2>
+    </div>
+    <div class="add"><h2>Submitted Assignments</h2></div>
+    <div class="section">
+        <!-- Submitted assignments will be displayed here by gradingTeacher.js -->
+    </div>
+    <script src="./Scripts/gradingTeacher.js"></script>
+</body>
+</html>
