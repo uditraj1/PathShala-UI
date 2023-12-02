@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PathShala - Submit Assignment</title>
+    <link rel="stylesheet" href="./Styles/submitAssignment.css" />
+</head>
+
+<body>
+    <div class="nav">
+        <div class="elements">
+            <img src="https://www.masaischool.com/img/navbar/logo.svg" alt="" />
+            <a href="./user.html">
+                <p>Study Material</p>
+            </a>
+            <a href="./submit_assignment.html" class="active">
+                <p>Assignments</p>
+            </a>
+            <p id="selectedCourseDisplay" class="selected-course"></p>
+        </div>
+        <div>
+            <div class="guest"></div>
+            <a href="./index.html">Logout</a>
+        </div>
+    </div>
+    <div class="title">
+        <div class="selected-course"></div>
+        <h2>Submit Assignment</h2>
+    </div>
+    <div class="add"><h2>Assignment Details</h2></div>
+    <div id="selectedAssignmentDetails"></div>
+    <div id="assignmentDetails"></div>
+    <div class="add"><h2>Submission</h2></div>
+    <div class="add" id="assignmentSubmit"></div>
+    <!-- <div class="submission-form">
+        <h3>Your Submission</h3>
+        <label for="answer">Your Answer:</label>
+        <textarea id="answer" rows="4" cols="50" placeholder="Type your answer here..."></textarea>
+        <input type="file" id="fileInput" accept=".pdf, .doc, .docx" />
+        <button onclick="submitAssignment()">Submit</button>
+    </div> -->
+    <script src="./Scripts/submitAssignment.js"></script>
+</body>
+
+</html>
