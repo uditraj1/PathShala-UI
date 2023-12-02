@@ -18,6 +18,7 @@ class lectureList {
             <th>Assignment Description</th>
             <th>File Attached</th>
             <th>Action</th> <!-- New column for any action buttons -->
+            <th>Clearing Action</th>
         `;
         lectureTable.appendChild(headingsRow);
     
@@ -30,6 +31,7 @@ class lectureList {
                 <td>${elem.assignmentDescription}</td>
                 <td>${elem.file}</td>
                 <td><button class="new" onclick="downloadFile('${elem.file}', '${elem.fileContent}')">Download</button></td>
+                <td><button class="new" onclick="removeAssignment('${elem.file}')">Remove</button></td>
             `;
             lectureTable.appendChild(lectureRow);
         });
@@ -155,6 +157,7 @@ function displayAssignments(assignments) {
         <th>Assignment Description</th>
         <th>File Attached</th>
         <th>Action</th> <!-- New column for any action buttons -->
+        <th>Clearing Action</th>
     `;
     assignmentTable.appendChild(headingsRow);
   
@@ -167,12 +170,27 @@ function displayAssignments(assignments) {
           <td>${assignment.assignmentDescription}</td>
           <td>${assignment.fileInput}</td>
           <td><button class="new">Download</button></td>
+          <td><button class="new">Remove</button></td>
       `;
       assignmentTable.appendChild(assignmentRow);
     });
   
     // Append the table to the section
     assignmentSection.appendChild(assignmentTable);
+}
+// Function to remove study material
+function removeAssignment(fileName) {
+  // Retrieve the material data based on the file name
+  const materials = JSON.parse(localStorage.getItem('assignments')) || [];
+  const updatedMaterials = materials.filter(material => material.file !== fileName);
+
+  // Update localStorage with the new materials array
+  localStorage.setItem('assignments', JSON.stringify(updatedMaterials));
+
+  // Optionally, you can add a confirmation message
+  alert('Assignment removed successfully!');
+
+  showLectureList();
 }
 function uploadAssignment() {
     const topicName = document.getElementById("topicName").value;
