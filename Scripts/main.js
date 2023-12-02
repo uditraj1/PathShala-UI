@@ -22,7 +22,7 @@ class user {
     }
     if (data == true) {
       if (us == "student") {
-        window.location = "user.html";
+        window.location = "course_dashboard_student.html";
       } else if(us=="teacher") {
         window.location = "course_dashboard_teacher.html"
       }
